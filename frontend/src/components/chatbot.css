@@ -1,0 +1,122 @@
+body{
+  background:linear-gradient(135deg,#d4fc79,#96e6a1);
+  
+}
+
+
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(38, 88, 5, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(76,175,80,0.6);
+  transition: 0.3;
+  z-index:9999;
+}
+
+.chat-toggle:hover{
+  transform: scale(1.1);
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+  z-index: 9999;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-header {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  background: rgba(38, 88, 5, 0.9);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+
+}
+
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.user {
+  align-self: flex-end;
+  margin: 6px;
+  padding: 10px 12px;
+  background: rgba(78, 223, 83, 0.8);
+  color:white;
+  border-radius: 15px 15px 0 15px;
+  max-width: 75%;
+}
+
+.bot {
+  align-self: flex-end;
+  margin: 6px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.14);
+  color: #222;
+  border-radius: 15px 15px 15px 0;
+  max-width: 75%;
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.chat-footer input{
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.6);
+}
+
+.chat-footer button{
+  margin-left: 5px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  background: rgba(38, 88, 5);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.chat-footer button:hover{
+  transform: scale(1.1);
+  background: #388e3c;
+}
